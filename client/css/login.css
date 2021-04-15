@@ -1,0 +1,109 @@
+.loginContainer {
+    margin-left: 24%;
+    width: 52%;
+    padding-top: 5%;
+    align-items: center;
+}
+
+.signup,
+.login {
+    width: 50%;
+    background: rgb(240, 240, 240);
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.login-form,
+.signup-form {
+
+    background: rgb(249 249 249);
+    padding: 40px;
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    height: 412px;
+
+}
+
+.about-header {
+    padding-left: 200px;
+}
+
+/* fieldset */
+#emailInput,
+#nameInput,
+#classInput,
+#countryInput,
+#passwordInput,
+#email,
+#password {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #859797;
+    color: #3e3e40;
+    font-size: 14px;
+    outline: none;
+
+}
+
+button#signupButton {
+
+    margin-top: 30px;
+    width: 100%;
+    background: #cee7cd;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+button#loginButton {
+    margin-top: 50px;
+    width: 100%;
+    background: #cee7cd;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+}
+.input:focus {
+    border: 2px solid rgb(112, 62, 62);
+}
+
+span a {
+    text-decoration: none;
+    color: #000;
+}
+
+p#LoginPara {
+    font-size: 20px;
+}
+
+input.input {
+    width: 100%;
+    margin-top: 25px;
+}
+/* logout button css */
+button#logout {
+    padding: 30px;
+    position: absolute;
+    background-color: rgb(135, 168, 157);
+}

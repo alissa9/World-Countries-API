@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/country.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+
+        <title>Student Project</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <section id="header">
+            <div class="header container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a href="#hero">
+                            <h1>
+                                <span>World</span>
+                                <span></span>Countries
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="nav-list">
+                        <div class="layer">
+                            <div class="bar"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#hero" data-after="Home">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#projects" data-after="Projects">Countries</a>
+                            </li>
+                            <li>
+                                <a href="#about" data-after="About">Sign in</a>
+                            </li>
+                            <li>
+                                <a href="#contact" data-after="Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Header -->
+
+
+        <!-- Hero Section  -->
+        <section id="hero">
+            <div class="hero container">
+                <div>
+                    <h1>Welcome
+                        <span></span>
+                    </h1>
+                    <h1>To World
+                        <span></span>
+                    </h1>
+                    <h1>Countries<span></span>
+                    </h1>
+                    <a href="#projects" role="button" class="cta">Go to
+                        Countries</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero Section  -->
+
+        <!-- Countries Section -->
+
+        <section id="projects">
+
+
+            <div class="container">
+                <input id="search" class="search" type="text" placeholder="Search for a country" />
+
+                <div class="dropdown" id="filter">
+                    Filter by Region
+                    <i class="fas fa-chevron-down"></i>
+                    <ul>
+                        <li>All</li>
+                        <li>Africa</li>
+                        <li>Americas</li>
+                        <li>Asia</li>
+                        <li>Europe</li>
+                        <li>Oceania</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="modal" id="modal">
+                    <div class="container">
+                        <i class="fas fa-times"></i>
+
+                        
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
+
+
+                <div class="container countries" id="countries">
+                    <h2>Countries Loading...</h2>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Registration Section -->
+
+
+        <script>
+            // Login and Signup tab JS
+            $(document).ready(function () {
+
+                $(".signup-form").hide();
+                $(".signup").css("background", "none");
+
+                $(".login").click(function () {
+                    $(".signup-form").hide();
+                    $(".login-form").show();
+                    $(".signup").css("background", "none");
+                    $(".login").css("background", "#fff");
+                });
+
+                $(".signup").click(function () {
+                    $(".signup-form").show();
+                    $(".login-form").hide();
+                    $(".login").css("background", "none");
+                    $(".signup").css("background", "#fff");
+                });
+
+                $(".btn").click(function () {
+                    $(".input").val("");
+                });
+            });
+        </script>
+        <section id="about">
+            <div class="about container">
+                <div class="about-header">
+                    <h1 class="section-title">Registration
+                        <span>&</span>
+                        Login
+                    </h1>
+
+                    <div class="loginContainer">
+                        <div class="login">Log In</div>
+                        <div class="signup">Sign Up</div>
+
+                        <div class="signup-form">
+                            <!--Registration Form-->
+                            <div>
+
+                                Full Name:<input required type="text" name="name" id="nameInput"><br />
+                                University:<input required type="text" name="class" id="classInput"><br />
+                                Country:<input required type="text" name="class" id="countryInput"><br />
+                                Email:<input required type="email" name="email" id="emailInput"><br />
+                                Password:<input required type="password" name="password" id="passwordInput"><br />
+                                <p id="msgSingup"></p>
+                                <button id="signupButton" onclick="sendUserInfo()">
+
+                                    Sign UP
+                                </button>
+                               
+                            </div>
+                        </div>
+
+                        <!--Login Form-->
+                        <div class="login-form">
+                            Email:
+                            <input type="email" id="email" required>
+                            Password:<input type="password" id="password" required>
+                            <button id="loginButton" onclick="logUserInfo()">Login</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End About Section -->
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact container">
+                <div>
+                    <h1 class="section-title">Contact
+                        <span>info</span>
+                    </h1>
+                </div>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="icon"><img src="./img/phone.png" alt="contact img" /></div>
+                        <div class="contact-info">
+                            <h1>Phone</h1>
+                            <h2>+44 07777777</h2>
+
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><img src="./img/email.png" alt="contact img" /></div>
+                        <div class="contact-info">
+                            <h1>Email</h1>
+                            <h2>M99ALISSA@gmail.com</h2>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="footer container">
+                <div class="brand">
+                    <h1>
+                        <span>I</span>kbal
+                        <span>A</span>lissa
+                    </h1>
+                </div>
+                <h2>The Student Favourite Place
+                </h2>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="#"><img src="./img/facebook.png" alt="social
+                                img" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="#"><img src="./img/twitter.png" alt="social
+                                img" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="#"><img src="./img/instagram.png" alt="social
+                                img" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="#"><img src="./img/linkedin.png" alt="social
+                                img" /></a>
+                    </div>
+                </div>
+                <p>Copyright © 2021 Alissa. All rights reserved</p>
+            </div>
+        </section>
+        <!-- End Footer -->
+        <script src="style.js"></script>
+        <script src="client.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    </body>
+
+</html>
