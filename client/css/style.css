@@ -201,9 +201,10 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(/img/background1.jpg);
-	background-size: cover;
-	background-position: top center;
+	background-image: url(./background1.jpg);
+	 background-size: cover;
+	
+	background-position: top center; 
 	position: relative;
 	z-index: 1;
 }
@@ -439,6 +440,7 @@ section#projects {
 /* Footer */
 #footer {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	padding-top: 10px;
 }
 #footer .footer {
 	min-height: 200px;

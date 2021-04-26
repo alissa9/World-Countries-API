@@ -8,7 +8,7 @@ app.use(express.static('../client'));
 app.use(bodyParser.json());
 app.post('/signup', signUpUser);
 app.post('/signIn', signInUser);
-// app.post('/example', Example);
+
 
 
 /* Loading and saving the user details to the database */
@@ -37,9 +37,6 @@ async function signInUser(req, res) {
     });
 
 }
-
-
-
 
 
 app.listen(port, () => {
